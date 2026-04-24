@@ -1,0 +1,608 @@
+/* Aturan 6: Tema Biru (NPM Ganjil) */
+:root {
+    --primary-color: #007BFF;
+    --hover-color: #0056b3;
+    --text-black: #1a1a1a;
+    --text-gray: #666;
+    --bg-light: #f9fbff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.text-center {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* ================= HEADER & HERO ================= */
+header {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+}
+
+.logo {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    max-width: 300px;
+    line-height: 1.3;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    transition: 0.4s;
+}
+
+.menu a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #fff;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-btn, .hero-btn {
+    padding: 10px 25px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    backdrop-filter: blur(5px);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.nav-btn:hover, .hero-btn:hover {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hero-content h1 {
+    font-size: 60px;
+    color: #fff;
+    line-height: 1.2;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    color: rgba(255, 255, 255, 0.85);
+    max-width: 500px;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+/* ================= SECTION UMUM ================= */
+section {
+    padding: 100px 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-header h2 {
+    font-size: 35px;
+    color: var(--text-black);
+    margin-bottom: 10px;
+}
+
+.section-header p {
+    color: var(--text-gray);
+    font-size: 15px;
+}
+
+.btn-solid {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-solid:hover {
+    background-color: var(--hover-color);
+}
+
+/* ================= OUR HOUSE (SWIPER) ================= */
+.swiper {
+    width: 100%;
+    padding-bottom: 30px;
+}
+
+.swiper-slide {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    cursor: grab;
+}
+
+.house-desc {
+    padding: 20px;
+}
+
+.house-desc p {
+    font-size: 13px;
+    color: var(--text-gray);
+    margin-bottom: 5px;
+}
+
+.house-desc h3 {
+    font-size: 18px;
+    color: var(--text-black);
+    margin-bottom: 5px;
+}
+
+.house-desc h4 {
+    font-size: 16px;
+    color: var(--primary-color);
+}
+
+/* ================= ABOUT US (TENTANG) ================= */
+.about {
+    background-color: var(--bg-light);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.img-box {
+    position: relative;
+    z-index: 1;
+}
+
+.img-box img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.img-box::before {
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color);
+    opacity: 0.2;
+    border-radius: 20px;
+    z-index: -1;
+}
+
+.text-box h2 {
+    font-size: 35px;
+    color: var(--text-black);
+    margin-bottom: 10px;
+}
+
+.biodata-list {
+    margin: 25px 0;
+}
+
+.biodata-list p {
+    font-size: 15px;
+    color: var(--text-black);
+    margin-bottom: 10px;
+}
+
+.biodata-list strong {
+    color: var(--primary-color);
+    display: inline-block;
+    width: 120px;
+}
+
+.story-box {
+    background: #fff;
+    padding: 20px;
+    border-left: 4px solid var(--primary-color);
+    border-radius: 0 10px 10px 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+}
+
+.story-box p {
+    font-size: 14.5px;
+    line-height: 1.8;
+    color: var(--text-gray);
+}
+
+/* ================= KONTAK (SERVICES) ================= */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+    border: 1px solid rgba(0,0,0,0.03);
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 123, 255, 0.1);
+}
+
+.service-card i {
+    font-size: 35px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: var(--text-black);
+}
+
+.service-card a {
+    text-decoration: none;
+    color: var(--text-gray);
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.service-card a:hover {
+    color: var(--primary-color);
+}
+
+/* ================= OUR APPS BANNER ================= */
+.apps-banner {
+    position: relative;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1513694203232-719a280e022f?w=1200') center/cover;
+    padding: 80px 40px;
+    text-align: center;
+    border-radius: 20px;
+    color: #fff;
+    z-index: 1;
+}
+
+.apps-banner::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color);
+    opacity: 0.3;
+    border-radius: 20px;
+    z-index: -1;
+}
+
+.apps-banner h2 {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.apps-banner p {
+    font-size: 15px;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.app-links i {
+    font-size: 50px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.app-links i:hover {
+    color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+/* ================= FEEDBACK ================= */
+.feedback-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.feedback-card {
+    background: #fff;
+    padding: 30px;
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 10px;
+}
+
+.feedback-card p {
+    font-size: 14px;
+    color: var(--text-gray);
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-info h4 {
+    font-size: 15px;
+    color: var(--text-black);
+}
+
+.user-info span {
+    font-size: 13px;
+    color: var(--text-gray);
+}
+
+/* ================= FOOTER ================= */
+footer {
+    padding-top: 80px;
+    background: #fff;
+    border-top: 1px solid #eee;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.footer-col h3 {
+    font-size: 20px;
+    color: var(--text-black);
+    margin-bottom: 20px;
+}
+
+.footer-col p {
+    color: var(--text-gray);
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.social-icons i {
+    font-size: 20px;
+    color: var(--text-black);
+    margin-right: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.social-icons i:hover {
+    color: var(--primary-color);
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 15px;
+}
+
+.footer-col ul li a, .footer-col ul li {
+    color: var(--text-gray);
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: var(--primary-color);
+}
+
+.footer-col ul li i {
+    margin-right: 10px;
+    color: var(--text-black);
+}
+
+.copyright {
+    text-align: center;
+    padding: 30px 0;
+    border-top: 1px solid #eee;
+}
+
+.copyright p {
+    font-size: 14px;
+    color: var(--text-black);
+    font-weight: 500;
+}
+
+/* ================= MEDIA QUERY MOBILE ================= */
+@media screen and (max-width: 992px) {
+    .about-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media screen and (max-width: 768px) {
+    .hamburger { display: inline-block; }
+    
+    .menu {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        flex-direction: column;
+        width: 250px;
+        height: 100vh;
+        background-color: #fff;
+        padding-top: 100px;
+        padding-left: 30px;
+        z-index: 10;
+        box-shadow: 5px 0 15px rgba(0,0,0,0.1);
+    }
+    
+    .menu a {
+        color: #333;
+        font-weight: 600;
+        font-size: 18px;
+    }
+
+    .menu.menu-aktif { left: 0; }
+    .nav-btn { display: none; }
+    .hero-content h1 { font-size: 45px; }
+    .footer-grid { grid-template-columns: 1fr; }
+}
+
+/* ================= KODE HAMBURGER ANIMATION ================= */
+.hamburger {
+  padding: 15px 15px;
+  display: none; /* Muncul hanya di layar HP (lewat media query di atas) */
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible; 
+}
+
+.hamburger:hover { opacity: 0.7; }
+.hamburger.is-active:hover { opacity: 0.7; }
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+  background-color: #000 !important; 
+}
+
+.hamburger-box {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative; 
+}
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px; 
+}
+
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+  width: 40px;
+  height: 4px;
+  background-color: #000;
+  border-radius: 4px;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease; 
+}
+
+.hamburger-inner::before, .hamburger-inner::after {
+  content: "";
+  display: block; 
+}
+
+.hamburger-inner::before { top: -10px; }
+.hamburger-inner::after { bottom: -10px; }
+
+/* Animasi Hamburger Tipe: Spin */
+.hamburger--spin .hamburger-inner {
+  transition-duration: 0.22s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); 
+}
+
+.hamburger--spin .hamburger-inner::before {
+  transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; 
+}
+
+.hamburger--spin .hamburger-inner::after {
+  transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19); 
+}
+
+.hamburger--spin.is-active .hamburger-inner {
+  transform: rotate(225deg);
+  transition-delay: 0.12s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); 
+}
+
+.hamburger--spin.is-active .hamburger-inner::before {
+  top: 0;
+  opacity: 0;
+  transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; 
+}
+
+.hamburger--spin.is-active .hamburger-inner::after {
+  bottom: 0;
+  transform: rotate(-90deg);
+  transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1); 
+}
